@@ -72,21 +72,20 @@ c) Використайте switch із цілочисельною змінно�
 */
 // a)
 var b = -5
-if b>0 {
-    b+=1
-}
-else {
-    b-=1
+if b > 0 {
+    b += 1
+} else {
+    b -= 1
 }
 
 // b)
 for x in 1...10 {
-    print (x)
+    print(x)
 }
 var w = 1
-while w<=10 {
-    print (w)
-    w+=1
+while w <= 10 {
+    print(w)
+    w += 1
 }
 // c)
 var threeC = 0
@@ -127,20 +126,19 @@ b) Створіть функцію яка приймає на вхід маси�
 
 // a)
 func oft(array: [Int]) -> Int {
-    
     var max: Int = 0
     var count: Int = 0
     var volume: Int = 0
     var ret = 0
-    array.sorted()
     
+    array.sorted()
     for val in array {
         if volume != val {
             volume = val
             count = 1
         } else {
             count += 1
-            if max<count {
+            if max < count {
                 max = count
                 ret = volume
             }
@@ -161,13 +159,6 @@ func plus1(in array: inout [Int]) {
 }
 var arrPlus1 = [10, 20, 30]
 plus1(in: &arrPlus1)
-
-
-//func plus1(array: [Int]) -> [Int] {
-//       return array.map { value in value+1 }
-//}
-//var arr5b:[Int] = [10, 20, 30, 40]
-//plus1(array: arr5b)
 
 /*
  6-7 Cast objects safely from one type to another ( as! as? as init). Handle optionals and unwrap them safely (if let ; guard let ; != nil)
@@ -227,32 +218,6 @@ typeOfb(ValueB: 123)
 typeOfb(ValueB: false)
 typeOfb(ValueB: 777.00)
 typeOfb(ValueB: [2, 3, 4, 5])
-
-
-//func typeOfb(ValueB: Any?) -> String {
-//    guard let stringB = ValueB as? String else {
-//        guard let intB = ValueB as? Int else {
-//            guard let doubleB = ValueB as? Double else {
-//                guard let boolB = ValueB as? Bool else {
-//                    return "Maybe an array"
-//                }
-//                boolB
-//                return "Bool"
-//            }
-//            doubleB
-//            return "Double"
-//        }
-//        intB
-//        return "Int"
-//    }
-//    stringB
-//    return "String"
-//}
-//typeOfb(ValueB: "true")
-//typeOfb(ValueB: 123)
-//typeOfb(ValueB: false)
-//typeOfb(ValueB: 777.00)
-//typeOfb(ValueB: [2, 3, 4, 5])
 
 // c)
 func typeOfc(ValueC: Any?) -> String {
